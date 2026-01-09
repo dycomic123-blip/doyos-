@@ -1,0 +1,87 @@
+# AI电影引擎开发助手配置文件
+
+# 项目配置
+project:
+  name: "AI电影引擎"
+  start_date: "2026-01-09"
+  target_date: "2026-12-31"
+  work_hours_per_week: 30
+  timezone: "Asia/Shanghai"
+
+# iPhone日历同步配置
+calendar:
+  sync_enabled: false  # 首次使用需配置
+  provider: "icloud"  # icloud / google / caldav / shortcuts
+  username: ""  # Apple ID
+  app_password: ""  # 应用专用密码
+  calendar_name: "AI电影引擎开发"
+  sync_interval: 300  # 同步间隔（秒）
+
+# iPhone提醒配置
+reminders:
+  enabled: true
+  list_name: "开发任务"
+  due_date_offset: 0  # 截止日期偏移（天）
+  reminder_time: "09:00"  # 提醒时间
+
+# AI助手配置
+ai:
+  enabled: true
+  provider: "openai"  # openai / claude / local
+  model: "gpt-4"
+  api_key: ""  # 需要配置
+  temperature: 0.7
+  max_tokens: 1000
+
+# 通知配置
+notifications:
+  enabled: true
+  methods:
+    - desktop  # 桌面通知
+    - iphone   # iPhone推送
+  daily_summary:
+    enabled: true
+    time: "08:00"
+  deadline_warnings: [7, 3, 1]  # 提前N天警告
+
+# 工作习惯配置
+work_patterns:
+  productive_hours:
+    start: "09:00"
+    end: "18:00"
+  break_reminder: true
+  break_interval: 90  # 分钟
+  daily_standup: "09:30"
+
+# 进度跟踪
+tracking:
+  auto_track_time: true
+  track_git_commits: true
+  track_file_changes: true
+  generate_daily_report: true
+
+# 开发环境
+development:
+  editor: "vscode"
+  terminal: "iterm2"
+  browser: "chrome"
+
+# 快捷指令配置（用于iPhone集成）
+shortcuts:
+  enabled: false
+  server_url: "http://localhost:5000"
+  api_key: ""
+
+# 第三方集成
+integrations:
+  github:
+    enabled: false
+    token: ""
+    repo: ""
+  zapier:
+    enabled: false
+    webhook_url: ""
+  notion:
+    enabled: false
+    api_key: ""
+    database_id: ""
